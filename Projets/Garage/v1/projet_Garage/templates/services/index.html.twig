@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Garage{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Nos services</h1>
+
+
+<div class="card-group">
+
+    {% for service in services %}
+        <div class="col-4 mb-3">
+
+            <div class="card">
+                <img src="../../image/{{service.image}}" class="card-img-top" alt="{{ service.image }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{(service.nom)| capitalize }}</h5>
+                    <p class="card-text">A partir de {{ service.prix }} €</p>
+                    <a href="#" class="btn btn-primary">Prendre Rendez-Vous</a>
+                </div>
+            </div>
+
+        </div>
+    {% endfor %}
+
+    </div>
+{% endblock %}

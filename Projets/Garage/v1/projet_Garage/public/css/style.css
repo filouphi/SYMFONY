@@ -1,0 +1,21 @@
+*{
+    
+}
+
+#piedDePage
+{
+    background-color: red;
+    height: 140px;
+    width: 100%;
+}
+
+#grille
+{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    background-color: blue;
+}
