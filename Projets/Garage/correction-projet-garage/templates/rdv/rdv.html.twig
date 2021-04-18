@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Prendre Rendez-vous{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <div id="calendrier">
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+
+
+        window.onload = () => {
+
+            let calendarElt = document.querySelector('#calendrier')
+
+
+            let calendar = new FullCalendar.Calendar(calendarElt, {
+                initialView: 'dayGridMonth',
+                locale:'fr',
+                timeZone:'UTC',
+                selectable:true,
+                dateClick: function(info) {
+                    alert('Vous avez selectionné: ' + info.dateStr),
+                    info.dayEl.style.backgroundColor = 'green';
+                }
+            })
+
+
+            calendar.render()
+        }
+
+
+    </script>
+
+    {# CDN Calendar #}
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.js" integrity="sha256-t2JJt1GC1QdkhsZKmo69JfMhkQ7rNxAcGj2vncftAg0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js" integrity="sha256-YS9kklqEaLYBFpFsHZhoRQna5D2+RSAi/3V4+fXi9qQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/locales-all.min.js" integrity="sha256-Tlk+p3ciy9hAmL4sRwEpIKxlycqXMaoYj6Jaw2NirHI=" crossorigin="anonymous"></script>
+{% endblock %}
+
+
+
+

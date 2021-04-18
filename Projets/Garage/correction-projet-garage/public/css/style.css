@@ -1,0 +1,22 @@
+#piedDePage
+{
+    height: 80px;
+    background-color: rgb(151, 151, 238);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+/* #content{
+    min-height: 100vh;
+
+   
+    background-color: rgb(84, 84, 241);
+  
+} */
+
+#content {
+    height: 100%;
+    margin-bottom: 80px;
+}

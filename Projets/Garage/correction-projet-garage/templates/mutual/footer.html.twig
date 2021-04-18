@@ -1,0 +1,17 @@
+ $=la_date = date("d/m/y") 
+
+
+
+<footer  id="piedDePage">
+copyright:tout droit reservé.<br/>
+
+<i class="fab fa-facebook"></i>
+<i class="fab fa-twitter"></i>
+<i class="fab fa-youtube"></i>
+<br/>
+
+
+
+nous sommes le : {{ date()|format_datetime('short', 'none', locale='fr') }}
+
+</footer>
